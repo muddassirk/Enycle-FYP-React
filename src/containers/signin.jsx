@@ -10,6 +10,7 @@ import './css/line-awesome-font-awesome.min.css'
 import './css/font-awesome.min.css'
 import './lib/slick/slick.css'
 import './lib/slick/slick-theme.css'
+
 import {Link} from "react-router-dom";
 
 

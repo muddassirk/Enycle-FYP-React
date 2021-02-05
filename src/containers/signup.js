@@ -13,8 +13,10 @@ import './css/line-awesome-font-awesome.min.css'
 import './css/font-awesome.min.css'
 import './lib/slick/slick.css'
 import './lib/slick/slick-theme.css'
+import {Link} from "react-router-dom";
 
-export default function Signup(){
+
+export default function Signup() {
     return (
         <div className="wrapper">
             <div className="wrapper">
@@ -22,6 +24,9 @@ export default function Signup(){
                     <div className="signin-popup">
                         <div className="signin-pop">
                             <div className="row">
+
+
+
                                 <div className="col-lg-6">
                                     <div className="cmp-info">
                                         <div className="cm-logo">
@@ -39,7 +44,7 @@ export default function Signup(){
                                             <li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
                                         </ul>
 
-                                        <div className="sign_in_sec current" id="tab-1">
+                                        {/* <div className="sign_in_sec current" id="tab-1">
 
                                             <h3>Sign Up</h3>
 
@@ -67,7 +72,7 @@ export default function Signup(){
                                                                 </label>
                                                                 <small>Remember me</small>
                                                             </div>
-                                                            {/* <a href="#" title="">Forgot Password?</a> */}
+                                                            <a href="#" title="">Forgot Password?</a>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-12 no-pdd">
@@ -81,18 +86,25 @@ export default function Signup(){
                                             <div className="login-resources">
                                                 <h4>Login Via Social Account</h4>
                                                 <ul>
-                                                    {/* <li><a href="#" title="" className="fb"><i className="fa fa-facebook"></i>Login Via */}
-                                                    {/* Facebook</a></li> */}
-                                                    {/* <li><a href="#" title="" className="tw"><i className="fa fa-twitter"></i>Login Via */}
-                                                    {/* Twitter</a></li> */}
+                                                    <li><a href="#" title="" className="fb"><i className="fa fa-facebook"></i>Login Via
+                                                    Facebook</a></li>
+                                                    <li><a href="#" title="" className="tw"><i className="fa fa-twitter"></i>Login Via
+                                                    Twitter</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div className="sign_in_sec" id="tab-2">
+                                        </div> */}
+
+
+                                        <div className="sign_in_sec current" id="tab-2">
+
+
+                                            <h3>Sign Up</h3>
+
                                             <div className="signup-tab">
                                                 <i className="fa fa-long-arrow-left"></i>
 
                                                 <ul>
+                                                    <li data-tab="tab-3" class="current"><a href="#" title="">User</a></li>
                                                     <li data-tab="tab-4"><a href="#" title="">Company</a></li>
                                                 </ul>
                                             </div>
@@ -155,6 +167,9 @@ export default function Signup(){
                                                     </div>
                                                 </form>
                                             </div>
+        
+        
+        
                                             <div className="dff-tab" id="tab-4">
                                                 <form>
                                                     <div className="row">

@@ -7,6 +7,7 @@ import {
   } from "react-router-dom";
 import Signin from "../containers/signin"
 import Signup from "../containers/signup"
+import Vendor from "../containers/vender"
 
 
 
@@ -15,8 +16,8 @@ import Signup from "../containers/signup"
                 <Router>
                     <Route exact path="/" component={Signin}></Route>
                     <Route path="/signup" component={Signup}></Route>
-                    <Route path="/user"></Route>
-                    <Route path="/vendor"></Route>
+                    <Route path="/user" ></Route>
+                    <Route path="/vender" component={Vendor}></Route>
                 </Router>
         )
   }
