@@ -1,8 +1,18 @@
-import React from "react";
+import React from 'react';
+import hamaraImage from "./images/cm-main-img.png";
+import "./css/app.css";
 
 
 
-
+import './css/bootstrap.min.css'
+import './css/line-awesome.css'
+import './css/responsive.css'
+import "./css/animate.css"
+import './css/style.css'
+import './css/line-awesome-font-awesome.min.css'
+import './css/font-awesome.min.css'
+import './lib/slick/slick.css'
+import './lib/slick/slick-theme.css'
 
 export default function Signup(){
     return (
@@ -16,7 +26,7 @@ export default function Signup(){
                                     <div className="cmp-info">
                                         <div className="cm-logo">
                                             <img src="" alt="" />
-                                            <p> Envycle, Recycle your materials through our application
+                                            <p> Signup
                                                    </p>
                                         </div>
                                         <img src={hamaraImage} alt="" />
@@ -31,7 +41,7 @@ export default function Signup(){
 
                                         <div className="sign_in_sec current" id="tab-1">
 
-                                            <h3>Sign in</h3>
+                                            <h3>Sign Up</h3>
 
 
                                             <form>

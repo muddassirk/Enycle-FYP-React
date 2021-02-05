@@ -1,9 +1,6 @@
 import React from 'react';
 import hamaraImage from "./images/cm-main-img.png";
 import "./css/app.css";
-
-
-
 import './css/bootstrap.min.css'
 import './css/line-awesome.css'
 import './css/responsive.css'
@@ -13,6 +10,7 @@ import './css/line-awesome-font-awesome.min.css'
 import './css/font-awesome.min.css'
 import './lib/slick/slick.css'
 import './lib/slick/slick-theme.css'
+import {Link} from "react-router-dom";
 
 
 
@@ -53,7 +51,7 @@ function Signin() {
                                     <div className="login-sec">
                                         <ul className="sign-control">
                                             <li data-tab="tab-1" className="current"><a href="#" title="">Sign in</a></li>
-                                            <li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
+                                            <Link to="/signup"> <li><a href="#" title="">Sign up</a></li></Link>
                                         </ul>
 
                                         <div className="sign_in_sec current" id="tab-1">
