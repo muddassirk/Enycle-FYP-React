@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Room from './app.jsx'
+import App from './app.jsx'
 
 
 
 
-ReactDOM.render(<Room />,
+ReactDOM.render(<App />,
   document.getElementById('root')
 );
 
