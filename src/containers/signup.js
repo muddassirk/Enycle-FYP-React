@@ -40,8 +40,9 @@ export default function Signup() {
                                 <div className="col-lg-6">
                                     <div className="login-sec">
                                         <ul className="sign-control">
-                                            <li data-tab="tab-1" className="current"><a href="#" title="">Sign in</a></li>
-                                            <li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
+                                            {/* <li data-tab="tab-1" ><a href="#" title="">Sign in</a></li> */}
+                                            <Link to="/"> <li><a href="#" title="">Sign in</a></li></Link>
+                                            <li data-tab="tab-2" className="current"><a href="#" title="">Sign up</a></li>
                                         </ul>
 
                                         {/* <div className="sign_in_sec current" id="tab-1">
@@ -105,7 +106,9 @@ export default function Signup() {
 
                                                 <ul>
                                                     <li data-tab="tab-3" class="current"><a href="#" title="">User</a></li>
-                                                    <li data-tab="tab-4"><a href="#" title="">Company</a></li>
+                                                    {/* <li data-tab="tab-4"><a href="#" title="">Company</a></li> */}
+                                                    <Link to="/vendor"> <li ><a href="#" title="">Company</a></li></Link>
+
                                                 </ul>
                                             </div>
                                             <div className="dff-tab current" id="tab-3">
