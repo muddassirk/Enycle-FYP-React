@@ -39,8 +39,8 @@ export default function Vendor() {
                                     <div className="login-sec">
                                         <ul className="sign-control">
                                             {/* <li data-tab="tab-1" ><a href="#" title="">Sign in</a></li> */}
-                                            <Link to="/"> <li><a href="#" title="">Sign in</a></li></Link>
-                                            <li data-tab="tab-2" className="current"><a href="#" title="">Sign up</a></li>
+                                        <li>     <Link to="/">Sign in</Link></li>
+                                            <li data-tab="tab-2" className="current"><Link to="/signup">Sign up</Link></li>
                                         </ul>
 
 
@@ -55,14 +55,11 @@ export default function Vendor() {
 
                                                 <ul>
                                                     {/* <li data-tab="tab-3" ><a href="#" title="">User</a></li> */}
-                                                    <Link to="/user"> <li ><a href="#" title="">User</a></li></Link>
-                                                    <li data-tab="tab-4" class="current"><a href="#" title="">Company</a></li>
+                                                <li >     <Link to="/user">User </Link></li>
+                                                    <li data-tab="tab-4" class="current"><Link to="/vendor">Company </Link></li>
 
                                                 </ul>
                                             </div>
-        
-        
-        
                                             <div className="dff-tab current" id="tab-4">
                                                 <form>
                                                     <div className="row">
@@ -96,7 +93,7 @@ export default function Vendor() {
                                                             <div className="checky-sec st2">
                                                                 <div className="fgt-sec">
                                                                     <input type="checkbox" name="cc" id="c3" />
-                                                                    <label for="c3">
+                                                                    <label >
                                                                         <span></span>
                                                                     </label>
                                                                     <small>Yes, I understand and agree to the Envycle Terms And

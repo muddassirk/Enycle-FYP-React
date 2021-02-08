@@ -1,9 +1,6 @@
 import React from 'react';
 import hamaraImage from "./images/cm-main-img.png";
 import "./css/app.css";
-
-
-
 import './css/bootstrap.min.css'
 import './css/line-awesome.css'
 import './css/responsive.css'
@@ -24,9 +21,6 @@ export default function Signup() {
                     <div className="signin-popup">
                         <div className="signin-pop">
                             <div className="row">
-
-
-
                                 <div className="col-lg-6">
                                     <div className="cmp-info">
                                         <div className="cm-logo">
@@ -41,8 +35,8 @@ export default function Signup() {
                                     <div className="login-sec">
                                         <ul className="sign-control">
                                             {/* <li data-tab="tab-1" ><a href="#" title="">Sign in</a></li> */}
-                                            <Link to="/"> <li><a href="#" title="">Sign in</a></li></Link>
-                                            <li data-tab="tab-2" className="current"><a href="#" title="">Sign up</a></li>
+                                           <li> <Link to="/">Sigin </Link></li>
+                                            <li data-tab="tab-2" className="current"><Link to="/signup">Signup </Link></li>
                                         </ul>
 
                                         {/* <div className="sign_in_sec current" id="tab-1">
@@ -105,9 +99,9 @@ export default function Signup() {
                                                 <i className="fa fa-long-arrow-left"></i>
 
                                                 <ul>
-                                                    <li data-tab="tab-3" class="current"><a href="#" title="">User</a></li>
+                                                    <li data-tab="tab-3" class="current"><Link to="/signup"> User </Link></li>
                                                     {/* <li data-tab="tab-4"><a href="#" title="">Company</a></li> */}
-                                                    <Link to="/vendor"> <li ><a href="#" title="">Company</a></li></Link>
+                                                    <li >   <Link to="/vendor"> Company </Link> </li>
 
                                                 </ul>
                                             </div>
@@ -116,13 +110,13 @@ export default function Signup() {
                                                     <div className="row">
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="name" placeholder="Full Name" />
+                                                                <input autocomplete="on" type="text" name="name" placeholder="Full Name" />
                                                                 <i className="la la-user"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="country" placeholder="Country" />
+                                                                <input autocomplete="on" type="text" name="country" placeholder="Country" />
                                                                 <i className="la la-globe"></i>
                                                             </div>
                                                         </div>
@@ -141,13 +135,13 @@ export default function Signup() {
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="password" placeholder="Password" />
+                                                                <input autocomplete="on" autocomplete="on" type="password" name="password" placeholder="Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="repeat-password"
+                                                                <input autocomplete="on"  type="password" name="repeat-password"
                                                                     placeholder="Repeat Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
@@ -155,8 +149,8 @@ export default function Signup() {
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="checky-sec st2">
                                                                 <div className="fgt-sec">
-                                                                    <input type="checkbox" name="cc" id="c2" />
-                                                                    <label for="c2">
+                                                                    <input autocomplete="on" type="checkbox" name="cc" id="c2" />
+                                                                    <label >
                                                                         <span></span>
                                                                     </label>
                                                                     <small>Yes, I understand and agree to the Envycle Terms And
@@ -178,26 +172,26 @@ export default function Signup() {
                                                     <div className="row">
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="company-name"
+                                                                <input autocomplete="on" type="text" name="company-name"
                                                                     placeholder="Company Name" />
                                                                 <i className="la la-building"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="country" placeholder="Country" />
+                                                                <input autocomplete="on" type="text" name="country" placeholder="Country" />
                                                                 <i className="la la-globe"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="password" placeholder="Password" />
+                                                                <input autocomplete="on" type="password" name="password" placeholder="Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="repeat-password"
+                                                                <input autocomplete="on" type="password" name="repeat-password"
                                                                     placeholder="Repeat Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
@@ -205,8 +199,8 @@ export default function Signup() {
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="checky-sec st2">
                                                                 <div className="fgt-sec">
-                                                                    <input type="checkbox" name="cc" id="c3" />
-                                                                    <label for="c3">
+                                                                    <input autocomplete="on" type="checkbox" name="cc" id="c3" />
+                                                                    <label >
                                                                         <span></span>
                                                                     </label>
                                                                     <small>Yes, I understand and agree to the Envycle Terms And

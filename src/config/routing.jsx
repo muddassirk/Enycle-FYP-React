@@ -1,9 +1,7 @@
 import React from "react";
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
-    Link
   } from "react-router-dom";
 import Signin from "../containers/signin"
 import Signup from "../containers/signup"
