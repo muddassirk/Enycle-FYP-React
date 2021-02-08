@@ -110,8 +110,8 @@ function Signin() {
                         </div>
                     </div>
                 </div>
-                <div class="footy-sec">
-                    <div class="container">
+                <div className="footy-sec">
+                    <div className="container">
 
 
                     </div>

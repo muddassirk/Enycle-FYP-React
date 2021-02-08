@@ -99,7 +99,7 @@ export default function Signup() {
                                                 <i className="fa fa-long-arrow-left"></i>
 
                                                 <ul>
-                                                    <li data-tab="tab-3" class="current"><Link to="/signup"> User </Link></li>
+                                                    <li data-tab="tab-3" className="current"><Link to="/signup"> User </Link></li>
                                                     {/* <li data-tab="tab-4"><a href="#" title="">Company</a></li> */}
                                                     <li >   <Link to="/vendor"> Company </Link> </li>
 
@@ -221,8 +221,8 @@ export default function Signup() {
                         </div>
                     </div>
                 </div>
-                <div class="footy-sec">
-                    <div class="container">
+                <div className="footy-sec">
+                    <div className="container">
 
 
                     </div>

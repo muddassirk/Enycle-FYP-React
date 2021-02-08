@@ -56,7 +56,7 @@ export default function Vendor() {
                                                 <ul>
                                                     {/* <li data-tab="tab-3" ><a href="#" title="">User</a></li> */}
                                                 <li >     <Link to="/user">User </Link></li>
-                                                    <li data-tab="tab-4" class="current"><Link to="/vendor">Company </Link></li>
+                                                    <li data-tab="tab-4" className="current"><Link to="/vendor">Company </Link></li>
 
                                                 </ul>
                                             </div>
@@ -114,8 +114,8 @@ export default function Vendor() {
                         </div>
                     </div>
                 </div>
-                <div class="footy-sec">
-                    <div class="container">
+                <div className="footy-sec">
+                    <div className="container">
 
 
                     </div>
