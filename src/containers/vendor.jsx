@@ -1,15 +1,10 @@
 import React from 'react';
 import hamaraImage from "./images/cm-main-img.png";
+
 import "./css/app.css";
-import './css/bootstrap.min.css'
 import './css/line-awesome.css'
 import './css/responsive.css'
-import "./css/animate.css"
 import './css/style.css'
-import './css/line-awesome-font-awesome.min.css'
-import './css/font-awesome.min.css'
-import './lib/slick/slick.css'
-import './lib/slick/slick-theme.css'
 
 import {Link} from "react-router-dom";
 
@@ -65,26 +60,26 @@ export default function Vendor() {
                                                     <div className="row">
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="company-name"
+                                                                <input autoComplete="on"  type="text" name="company-name"
                                                                     placeholder="Company Name" />
                                                                 <i className="la la-building"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="text" name="country" placeholder="Country" />
+                                                                <input autoComplete="on"  type="text" name="country" placeholder="Country" />
                                                                 <i className="la la-globe"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="password" placeholder="Password" />
+                                                                <input autoComplete="on"  type="password" name="password" placeholder="Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input type="password" name="repeat-password"
+                                                                <input autoComplete="on"  type="password" name="repeat-password"
                                                                     placeholder="Repeat Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>

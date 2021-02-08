@@ -1,15 +1,12 @@
 import React from 'react';
 import hamaraImage from "./images/cm-main-img.png";
+
 import "./css/app.css";
-import './css/bootstrap.min.css'
 import './css/line-awesome.css'
-import './css/responsive.css'
-import "./css/animate.css"
 import './css/style.css'
-import './css/line-awesome-font-awesome.min.css'
-import './css/font-awesome.min.css'
-import './lib/slick/slick.css'
-import './lib/slick/slick-theme.css'
+import './css/responsive.css'
+
+
 
 import {Link} from "react-router-dom";
 
@@ -64,13 +61,13 @@ function Signin() {
                                                 <div className="row">
                                                     <div className="col-lg-12 no-pdd">
                                                         <div className="sn-field">
-                                                            <input autocomplete="on" type="text" name="username" placeholder="Username" />
+                                                            <input autoComplete="on" type="text" name="username" placeholder="Username" />
                                                             <i className="la la-user"></i>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-12 no-pdd">
                                                         <div className="sn-field">
-                                                            <input autocomplete="on"  type="password" name="password" placeholder="Password" />
+                                                            <input autoComplete="on"  type="password" name="password" placeholder="Password" />
                                                             <i className="la la-lock"></i>
                                                         </div>
                                                     </div>
