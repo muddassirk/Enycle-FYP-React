@@ -16,20 +16,21 @@ import axios from "axios";
 
 
 
-function Signin() {
+export default function VendorSignin() {
 
     var email = useRef();
     var password = useRef();
+    
+    function vendorLogin(e) {
 
-    function login(e) {
         e.preventDefault();
         axios({
             method: 'post',
-            url: url + "/auth/login",
+            url: url + "/vendorauth/login",
             data: {
 
-                userEmail: email.current.value,
-                userPassword: password.current.value,
+                vendorEmail: email.current.value,
+                vendorPassword: password.current.value,
 
             },
         }).then((response) => {
@@ -74,24 +75,24 @@ function Signin() {
                                                 <i className="fa fa-long-arrow-left"></i>
 
                                                 <ul>
-                                                    <li data-tab="tab-3" className="current"><Link to="/"> User </Link></li>
+                                                    <li data-tab="tab-3" ><Link to="/"> User </Link></li>
                                                     {/* <li data-tab="tab-4"><a href="#" title="">Company</a></li> */}
-                                                    <li >   <Link to="/vendorsignin"> Company </Link> </li>
+                                                    <li className="current">   <Link to="/vendorsignin"> Company </Link> </li>
 
                                                 </ul>
                                             </div>
 
-                                            <form onSubmit={(e) => login(e)}>
+                                            <form onSubmit={(e) => vendorLogin(e)} >
                                                 <div className="row">
                                                     <div className="col-lg-12 no-pdd">
                                                         <div className="sn-field">
-                                                            <input autoComplete="on" ref={email} type="email" name="email" placeholder="Enter Email" />
+                                                            <input ref={email} autoComplete="on" type="email" name="email" placeholder="Vendor Email" />
                                                             <i className="la la-user"></i>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-12 no-pdd">
                                                         <div className="sn-field">
-                                                            <input ref={password} type="password" name="password" placeholder="Enter Password" />
+                                                            <input ref={password} type="password" name="password" placeholder="Vendor Password" />
                                                             <i className="la la-lock"></i>
                                                         </div>
                                                     </div>
@@ -143,9 +144,5 @@ function Signin() {
     );
 
 }
-
-
-export default Signin;
-
 
 

@@ -6,7 +6,7 @@ import {
 import Signin from "../containers/signin"
 import Signup from "../containers/signup"
 import Vendor from "../containers/vendor"
-
+import VendorSignin from "../containers/vendorsigin";
 
 
   export default function AppRouter(){
@@ -16,6 +16,7 @@ import Vendor from "../containers/vendor"
                     <Route path="/signup" component={Signup}></Route>
                     <Route path="/user" component={Signup} ></Route>
                     <Route path="/vendor" component={Vendor}></Route>
+                    <Route path="/vendorsignin" component={VendorSignin}></Route>
                 </Router>
         )
   }
