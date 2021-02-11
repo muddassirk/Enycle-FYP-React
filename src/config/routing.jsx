@@ -8,7 +8,7 @@ import Signup from "../containers/signup"
 import Vendor from "../containers/vendor"
 import VendorSignin from "../containers/vendorsigin";
 import VendorDashboard from "../containers/vendordashboard";
-import UserDashboard from "../containers/vendordashboard";
+import UserDashboard from "../containers/userdashboard";
 
 
 export default function AppRouter() {
