@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import hamaraImage from "./images/cm-main-img.png";
 import "./css/app.css";
 import './css/line-awesome.css'
 import './css/style.css'
 import './css/responsive.css'
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import url from "../secrets/index";
 import axios from "axios";
 
@@ -20,7 +20,8 @@ export default function VendorSignin() {
 
     var email = useRef();
     var password = useRef();
-    
+    var [loggedIn, setLogin] = useState(false);
+
     function vendorLogin(e) {
 
         e.preventDefault();
@@ -34,8 +35,8 @@ export default function VendorSignin() {
 
             },
         }).then((response) => {
-            console.log("response", response);
 
+            setLogin((prevValue) => !prevValue);
             alert(response.data.message);
 
         }, (error) => {
@@ -140,6 +141,12 @@ export default function VendorSignin() {
                 </div>
 
             </div>
+
+            {
+                loggedIn ? <Redirect to="/vendordashboard" /> : ""
+            }
+
+
         </div>
     );
 
