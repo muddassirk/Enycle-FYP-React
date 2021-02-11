@@ -20,14 +20,6 @@ import {Link} from "react-router-dom";
 
 function Signin() {
 
-
-
-
-
-
-
-    
-
     return (
         <div className="wrapper">
             <div className="wrapper">

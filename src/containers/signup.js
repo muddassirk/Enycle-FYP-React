@@ -1,15 +1,48 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import hamaraImage from "./images/cm-main-img.png";
-
 import "./css/app.css";
 import './css/line-awesome.css'
 import './css/responsive.css'
 import './css/style.css'
-
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import url from "../secrets/index";
+import axios from 'axios';
 
 export default function Signup() {
+
+    var name = useRef();
+    var email = useRef();
+    var password = useRef();
+    var address = useRef();
+    var phone = useRef();
+
+
+    function signUp(e) {
+        e.preventDefault();
+        axios({
+            method: 'post',
+            url: url + "/auth/signup",
+            data: {
+                userName: name.current.value,
+                userEmail: email.current.value,
+                userPassword: password.current.value,
+                userAddress: address.current.value,
+                userPhone : phone.current.value,
+            },
+        }).then((response) => {
+            console.log("response", response);
+
+            alert(response.data.message);
+
+        }, (error) => {
+            alert(error.response.data.message);
+        })
+    }
+
+
+
+
+
     return (
         <div className="wrapper">
             <div className="wrapper">
@@ -31,60 +64,9 @@ export default function Signup() {
                                     <div className="login-sec">
                                         <ul className="sign-control">
                                             {/* <li data-tab="tab-1" ><a href="#" title="">Sign in</a></li> */}
-                                           <li> <Link to="/">Sigin </Link></li>
+                                            <li> <Link to="/">Sigin </Link></li>
                                             <li data-tab="tab-2" className="current"><Link to="/signup">Signup </Link></li>
                                         </ul>
-
-                                        {/* <div className="sign_in_sec current" id="tab-1">
-
-                                            <h3>Sign Up</h3>
-
-
-                                            <form>
-                                                <div className="row">
-                                                    <div className="col-lg-12 no-pdd">
-                                                        <div className="sn-field">
-                                                            <input type="text" name="username" placeholder="Username" />
-                                                            <i className="la la-user"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-lg-12 no-pdd">
-                                                        <div className="sn-field">
-                                                            <input type="password" name="password" placeholder="Password" />
-                                                            <i className="la la-lock"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-lg-12 no-pdd">
-                                                        <div className="checky-sec">
-                                                            <div className="fgt-sec">
-                                                                <input type="checkbox" name="cc" id="c1" />
-                                                                <label for="c1">
-                                                                    <span></span>
-                                                                </label>
-                                                                <small>Remember me</small>
-                                                            </div>
-                                                            <a href="#" title="">Forgot Password?</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-lg-12 no-pdd">
-                                                        <button type="submit" value="submit">Sign in</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-
-
-
-                                            <div className="login-resources">
-                                                <h4>Login Via Social Account</h4>
-                                                <ul>
-                                                    <li><a href="#" title="" className="fb"><i className="fa fa-facebook"></i>Login Via
-                                                    Facebook</a></li>
-                                                    <li><a href="#" title="" className="tw"><i className="fa fa-twitter"></i>Login Via
-                                                    Twitter</a></li>
-                                                </ul>
-                                            </div>
-                                        </div> */}
-
 
                                         <div className="sign_in_sec current" id="tab-2">
 
@@ -102,46 +84,55 @@ export default function Signup() {
                                                 </ul>
                                             </div>
                                             <div className="dff-tab current" id="tab-3">
-                                                <form>
+                                                <form onSubmit={(e) => signUp(e)}>
                                                     <div className="row">
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input autoComplete="on" type="text" name="name" placeholder="Full Name" />
+                                                                <input required ref={name} autoComplete="on" type="text" name="name" placeholder="Full Name" />
                                                                 <i className="la la-user"></i>
                                                             </div>
                                                         </div>
-                                                        <div className="col-lg-12 no-pdd">
+                                                        {/* <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input autoComplete="on" type="text" name="country" placeholder="Country" />
+                                                                <input  autoComplete="on" type="text" name="phone" placeholder="Enter Phone No" />
                                                                 <i className="la la-globe"></i>
                                                             </div>
-                                                        </div>
+                                                        </div> */}
+
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <select>
-                                                                    <option>Category</option>
-                                                                    <option>Category 1</option>
-                                                                    <option>Category 2</option>
-                                                                    <option>Category 3</option>
-                                                                    <option>Category 4</option>
-                                                                </select>
-                                                                <i className="la la-dropbox"></i>
-                                                                <span><i className="fa fa-ellipsis-h"></i></span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="sn-field">
-                                                                <input autoComplete="on" type="password" name="password" placeholder="Password" />
+                                                                <input required autoComplete="on" ref={email} type="email" placeholder="Enter email" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
                                                         </div>
+
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="sn-field">
-                                                                <input autoComplete="on"  type="password" name="repeat-password"
+                                                                <input required ref={password} autoComplete="on" type="password" name="password" placeholder="Password" />
+                                                                <i className="la la-lock"></i>
+                                                            </div>
+                                                        </div>
+                                                        {/* <div className="col-lg-12 no-pdd">
+                                                            <div className="sn-field">
+                                                                <input autoComplete="on" type="password" name="repeat-password"
                                                                     placeholder="Repeat Password" />
                                                                 <i className="la la-lock"></i>
                                                             </div>
+                                                        </div> */}
+                                                        <div className="col-lg-12 no-pdd">
+                                                            <div className="sn-field">
+                                                                <input required ref={address} autoComplete="on" type="text" name="address" placeholder="address" />
+                                                                <i className="la la-lock"></i>
+                                                            </div>
                                                         </div>
+
+                                                        <div className="col-lg-12 no-pdd">
+                                                            <div className="sn-field">
+                                                                <input required ref={phone} autoComplete="on" type="text" name="address" placeholder="Phone Number" />
+                                                                <i className="la la-lock"></i>
+                                                            </div>
+                                                        </div>
+
                                                         <div className="col-lg-12 no-pdd">
                                                             <div className="checky-sec st2">
                                                                 <div className="fgt-sec">
@@ -160,56 +151,8 @@ export default function Signup() {
                                                     </div>
                                                 </form>
                                             </div>
-        
-        
-        
-                                            <div className="dff-tab" id="tab-4">
-                                                <form>
-                                                    <div className="row">
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="sn-field">
-                                                                <input autoComplete="on" type="text" name="company-name"
-                                                                    placeholder="Company Name" />
-                                                                <i className="la la-building"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="sn-field">
-                                                                <input autoComplete="on" type="text" name="country" placeholder="Country" />
-                                                                <i className="la la-globe"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="sn-field">
-                                                                <input autoComplete="on" type="password" name="password" placeholder="Password" />
-                                                                <i className="la la-lock"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="sn-field">
-                                                                <input autoComplete="on" type="password" name="repeat-password"
-                                                                    placeholder="Repeat Password" />
-                                                                <i className="la la-lock"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <div className="checky-sec st2">
-                                                                <div className="fgt-sec">
-                                                                    <input autoComplete="on" type="checkbox" name="cc" id="c3" />
-                                                                    <label >
-                                                                        <span></span>
-                                                                    </label>
-                                                                    <small>Yes, I understand and agree to the Envycle Terms And
-                                                                Conditions.</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-12 no-pdd">
-                                                            <button type="submit" value="submit">Get Started</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
