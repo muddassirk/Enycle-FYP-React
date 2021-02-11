@@ -5,7 +5,8 @@
         left: 0;
         width: 200px;
         height: 100%;
-        background-color: #e44d3a;
+        /* background-color: #014732; */
+        background-color: #014732;
         padding: 25px 20px;
         opacity: 0;
         visibility: hidden;
@@ -340,7 +341,7 @@
         top: 0;
         left: 0;
         width: 240px;
-        background-color: #e44d3a;
+        background-color: #014732;
         height: 100%;
         padding: 0 20px;
         opacity: 0;
