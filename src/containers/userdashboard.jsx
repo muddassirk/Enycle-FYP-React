@@ -23,6 +23,15 @@ import projects from "./images/icon3.png";
 import profile from "./images/icon4.png";
 
 
+import card1 from "./images/home-6.jpg";
+// import card1 from "./images/about-icon1.png";
+// import card2 from "./images/about-icon2.png";
+// import card3 from "./images/about-icon3.png";
+// import card4 from "./images/about-icon4.png";
+
+
+
+
 
 export default function UserDashboard() {
 
@@ -93,6 +102,7 @@ export default function UserDashboard() {
                         <div className="header-data">
                             <div className="logo">
                                 <a href="#" title=""><img src="" alt="" /></a>
+                                {/* <p>Envyvle <span>Removal Service</span></p> */}
                             </div>
 
                             <nav>
@@ -173,47 +183,118 @@ export default function UserDashboard() {
 
                                             </div>
 
-                                            {/* <div className="tags-sec full-width">
-                                                <ul>
-                                                    <li><a href="#" title="">Help Center</a></li>
-                                                    <li><a href="#" title="">About</a></li>
-                                                    <li><a href="#" title="">Privacy Policy</a></li>
-                                                    <li><a href="#" title="">Community Guidelines</a></li>
-                                                    <li><a href="#" title="">Cookies Policy</a></li>
-                                                    <li><a href="#" title="">Career</a></li>
-                                                    <li><a href="#" title="">Language</a></li>
-                                                    <li><a href="#" title="">Copyright Policy</a></li>
-                                                </ul>
-                                                <div className="cp-sec">
-                                                    <img src="images/logo2.png" alt="" />
-                                                    <p><img src="images/cp.png" alt="" />Copyright 2021</p>
-                                                </div>
-                                            </div> */}
+
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-8 no-pd">
                                         <div className="main-ws-sec">
-                                            <div className="post-topbar">
-                                                {/* <div className="user-picy">
-                                            <img src="images/resources/user-pic.png" alt="" />
-                                        </div> */}
+                                            {/* <div className="post-topbar">
+                                                <div className="user-picy">
+                                                    <img src="images/resources/user-pic.png" alt="" />
+                                                </div>
                                                 <div className="post-st">
                                                     <ul>
                                                         <li><a className="post_project" href="#" title="">Post a Item Name</a></li>
                                                         <li><a className="post-jb active" href="#" title="">Post Weight</a></li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className="posts-section">
-                                                <div className="post-bar">
+                                                {/* <div className="post-bar">
+                                                </div> */}
+
+
+
+                                                <div className="row">
+
+                                                    <div className="card mr-2 ml-4" style={{ width: '15rem' }}>
+                                                        <img 
+                                                         src={card1} className="card-img-top" alt="..." />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Type</h5>
+                                                            {/* <p className="card-text">
+                                                                recycle
+                                                                </p> */}
+                                                        </div>
+                                                        <ul className="list-group list-group-flush mx-2">
+                                                            <input style={{border:'1px solid #BCCFC9', borderRadius:'5px'}}
+                                                             className="list-group-item" type="text" placeholder="Input your recycle weight" />
+
+                                                        </ul>
+                                                        <div className="post-st ml-3">
+                                                            <ul>
+                                                                <li><a className="post-jb active mt-2" href="#" title="">Add</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="card mx-2" style={{ width: '15rem' }}>
+                                                        <img 
+                                                        src={card1} className="card-img-top" alt="..." />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Type</h5>
+                                                            {/* <p className="card-text">
+                                                                Waste
+                                                                </p> */}
+                                                        </div>
+                                                        <ul className="list-group list-group-flush mx-2">
+                                                            <input style={{border:'1px solid #BCCFC9', borderRadius:'5px'}}
+                                                            className="list-group-item" type="text" placeholder="Input your recycle weight" />
+
+                                                        </ul>
+                                                        <div className="post-st ml-3  ">
+                                                            <ul>
+                                                                <li><a className="post-jb active mt-2" href="#" title="">Add</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div className="row mt-4" >
+
+                                                    <div className="card mr-2 ml-4" style={{ width: '15rem' }}>
+                                                        <img src={card1} className="card-img-top" alt="..." />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Type</h5>
+                                                            {/* <p className="card-text">
+                                                                recycle
+                                                                </p> */}
+                                                        </div>
+                                                        <ul className="list-group list-group-flush mx-2">
+                                                            <input style={{border:'1px solid #BCCFC9', borderRadius:'5px'}}
+                                                             className="list-group-item" type="text" placeholder="Input your recycle weight" />
+
+                                                        </ul>
+                                                        <div className="post-st ml-3">
+                                                            <ul>
+                                                                <li><a className="post-jb active mt-2" href="#" title="">Add</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="card mx-2" style={{ width: '15rem' }}>
+                                                        <img src={card1} className="card-img-top" alt="..." />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Type</h5>
+                                                            {/* <p className="card-text">
+                                                                Waste
+                                                                </p> */}
+                                                        </div>
+                                                        <ul className="list-group list-group-flush mx-2">
+                                                            <input style={{border:'1px solid #BCCFC9', borderRadius:'5px'}}
+                                                            className="list-group-item" type="text" placeholder="Input your recycle weight" />
+
+                                                        </ul>
+                                                        <div className="post-st ml-3  ">
+                                                            <ul>
+                                                                <li><a className="post-jb active mt-2" href="#" title="">Add</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
 
-
-
-                                                
-                                                
-                                                 {/* Loding Logo */}
+                                                {/* Loding Logo */}
                                                 <div className="process-comm">
                                                     <div className="spinner">
                                                         <div className="bounce1"></div>
@@ -228,8 +309,7 @@ export default function UserDashboard() {
                                         <div className="right-sidebar">
                                             <div className="widget widget-about">
                                                 <img src="images/wd-logo.png" alt="" />
-                                                <h3>Track Time on KHTA</h3>
-                                                <span>Pay only for the Hours worked</span>
+                                                <h3>Kachra Hamara Tohfa Aapka</h3>
                                                 <div className="sign_link">
                                                     <h3><a href="sign-in.html" title="">Sign up</a></h3>
                                                     <a href="#" title="">Learn More</a>
@@ -240,21 +320,21 @@ export default function UserDashboard() {
 
                                         </div>
                                         <div className="tags-sec full-width">
-                                                <ul>
-                                                    <li><a href="#" title="">Help Center</a></li>
-                                                    <li><a href="#" title="">About</a></li>
-                                                    <li><a href="#" title="">Privacy Policy</a></li>
-                                                    <li><a href="#" title="">Community Guidelines</a></li>
-                                                    <li><a href="#" title="">Cookies Policy</a></li>
-                                                    <li><a href="#" title="">Career</a></li>
-                                                    <li><a href="#" title="">Language</a></li>
-                                                    <li><a href="#" title="">Copyright Policy</a></li>
-                                                </ul>
-                                                <div className="cp-sec">
-                                                    <img src="images/logo2.png" alt="" />
-                                                    <p><img src="images/cp.png" alt="" />Copyright 2021</p>
-                                                </div>
+                                            <ul>
+                                                <li><a href="#" title="">Help Center</a></li>
+                                                <li><a href="#" title="">About</a></li>
+                                                <li><a href="#" title="">Privacy Policy</a></li>
+                                                <li><a href="#" title="">Community Guidelines</a></li>
+                                                <li><a href="#" title="">Cookies Policy</a></li>
+                                                <li><a href="#" title="">Career</a></li>
+                                                <li><a href="#" title="">Language</a></li>
+                                                <li><a href="#" title="">Copyright Policy</a></li>
+                                            </ul>
+                                            <div className="cp-sec">
+                                                <img src="images/logo2.png" alt="" />
+                                                <p><img src="images/cp.png" alt="" />Copyright 2021</p>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
